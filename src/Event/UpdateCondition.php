@@ -7,7 +7,7 @@ use Xypp\Collector\Data\ConditionData;
 
 class UpdateCondition
 {
-    public function __construct(User $user, array|ConditionData $data)
+    public function __construct(?User $user, array|ConditionData $data)
     {
         $this->user = $user;
         $this->data = $data;

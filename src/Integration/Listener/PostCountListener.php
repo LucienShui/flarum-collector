@@ -55,7 +55,7 @@ class PostCountListener
             $this->postCondition($event->post->user, $event->post, -1);
     }
 
-    protected function postCondition(User $user, Post $post, int $amount)
+    protected function postCondition(?User $user, Post $post, int $amount)
     {
         $this->events->dispatch(
             new UpdateCondition(

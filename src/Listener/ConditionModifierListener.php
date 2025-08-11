@@ -15,6 +15,7 @@ class ConditionModifierListener
 
     public function __invoke(UpdateCondition $event)
     {
-        $this->conditionHelper->updateConditions($event->user, $event->data);
+        if ($event->user)
+            $this->conditionHelper->updateConditions($event->user, $event->data);
     }
 }

@@ -50,7 +50,7 @@ class DiscussionCountListener
         $this->discussionPostCondition($event->discussion->user, $event->discussion, -1);
     }
 
-    public function discussionCondition(User $user, Discussion $discussion, int $amount)
+    public function discussionCondition(?User $user, Discussion $discussion, int $amount)
     {
         $this->events->dispatch(
             new UpdateCondition(
@@ -79,7 +79,7 @@ class DiscussionCountListener
             }
         }
     }
-    public function discussionPostCondition(User $user, Discussion $discussion, int $amount)
+    public function discussionPostCondition(?User $user, Discussion $discussion, int $amount)
     {
         $updateValid = false;
         if (class_exists(\Flarum\Tags\Tag::class)) {

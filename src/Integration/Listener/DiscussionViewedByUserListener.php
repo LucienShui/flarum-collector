@@ -16,7 +16,7 @@ class DiscussionViewedByUserListener
     }
     public function __invoke(DiscussionWasViewed $event)
     {
-        $user = $event->getActor();
+        $user = $event->getViewer();
         if (!$user || $user->isGuest())
             return;
         $this->events->dispatch(

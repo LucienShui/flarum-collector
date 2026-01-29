@@ -11,6 +11,7 @@ xypp-collector:
         store_purchased: "购买商品"
         discussion_replied: "被回复"
         discussion_views: "主题被浏览"
+        discussion_viewed_by_user: "浏览主题数"
         badge_received: "获得徽章"
         email_changed: "修改邮箱"
         avatar_changed: "修改头像"
